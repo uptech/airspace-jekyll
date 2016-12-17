@@ -12,6 +12,7 @@ layout: page
             <h1>{{ page.title }}</h1>
             <div class="post-info-wrapper">
               <p class="italic">By <span class="bold">{{ page.author }}</span> on <span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p>
+              {% for tag in page.tags %}<span style="margin-left: 5px;">{{ tag }}</span>{% endfor %}
             </div>
             <hr />
             <p>{{ content }}</p>
@@ -22,5 +23,5 @@ layout: page
   </section>
 </div>
 <p class="center-text" style="padding: 30px;">
-  <a href="{{ site.baseurl }}/blog">Back to blog</a>
+  <a href="/blog">Back to blog</a>
 </p>
